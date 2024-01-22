@@ -16,7 +16,10 @@ require("lazy").setup({
   require("bernardo.plugins.rose-pine"),
   require("bernardo.plugins.kanagawa"),
   require("bernardo.plugins.telescope"),
-  require('bernardo.plugins.lua-line')
+  require('bernardo.plugins.lua-line'),
+  require('bernardo.plugins.treesitter'),
+  require('bernardo.plugins.tokyonights'),
+  require('bernardo.plugins.catppuccin'),
 })
 
 vim.cmd("colorscheme rose-pine")
