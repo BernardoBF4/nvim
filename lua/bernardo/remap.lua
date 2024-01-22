@@ -11,4 +11,8 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>")
+vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope grep_string<cr>")
+vim.keymap.set("n", "<leader>fgf", "<cmd>Telescope git_files<cr>")
