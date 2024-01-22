@@ -12,14 +12,17 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
+  require('bernardo.plugins.nvim-tree'),
   require('bernardo.plugins.vim-be-good'),
-  require("bernardo.plugins.rose-pine"),
-  require("bernardo.plugins.kanagawa"),
   require("bernardo.plugins.telescope"),
   require('bernardo.plugins.lua-line'),
   require('bernardo.plugins.treesitter'),
-  require('bernardo.plugins.tokyonights'),
-  require('bernardo.plugins.catppuccin'),
+
+  -- themes
+  require("bernardo.plugins.themes.rose-pine"),
+  require("bernardo.plugins.themes.kanagawa"),
+  require('bernardo.plugins.themes.tokyonights'),
+  require('bernardo.plugins.themes.catppuccin'),
 })
 
 vim.cmd("colorscheme rose-pine")
