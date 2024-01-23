@@ -11,6 +11,10 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "n", "nzzzv")
 vim.keymap.set("n", "N", "Nzzzv")
 
+-- Buffers
+vim.keymap.set("n", "\\]", "<cmd>bnext<cr>")
+vim.keymap.set("n", "\\[", "<cmd>bprev<cr>")
+
 -- Telescope
 vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>")
