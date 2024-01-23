@@ -24,5 +24,3 @@ require("lazy").setup({
   require('bernardo.plugins.themes.tokyonights'),
   require('bernardo.plugins.themes.catppuccin'),
 })
-
-vim.cmd("colorscheme rose-pine")
