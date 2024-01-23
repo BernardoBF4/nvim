@@ -13,15 +13,14 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   require('bernardo.plugins.nvim-tree'),
-  require('bernardo.plugins.vim-be-good'),
   require("bernardo.plugins.telescope"),
   require('bernardo.plugins.lua-line'),
   require('bernardo.plugins.treesitter'),
   require('bernardo.plugins.lsp-zero'),
 
   -- themes
-  require("bernardo.plugins.themes.rose-pine"),
-  require("bernardo.plugins.themes.kanagawa"),
-  require('bernardo.plugins.themes.tokyonights'),
-  require('bernardo.plugins.themes.catppuccin'),
+  require("bernardo.plugins.rose-pine"),
+
+  -- sporadic
+  require('bernardo.plugins.vim-be-good'),
 })
