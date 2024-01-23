@@ -16,7 +16,7 @@ vim.keymap.set("n", "<leader>ff", "<cmd>Telescope find_files<cr>")
 vim.keymap.set("n", "<leader>fg", "<cmd>Telescope git_files<cr>")
 vim.keymap.set("n", "<leader>fgs", "<cmd>Telescope grep_string<cr>")
 vim.keymap.set("n", "<leader>fgf", "<cmd>Telescope git_files<cr>")
-
+vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>')
 -- NvimTree
 vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle file explorer" })
 vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFileToggle<CR>", { desc = "Toggle file explorer on current file" }) -- toggle file explorer on current file
