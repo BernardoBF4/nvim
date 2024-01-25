@@ -25,3 +25,4 @@ vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>")
 
 -- NvimTree
 vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<cr>")
+vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<cr>")
