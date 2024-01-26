@@ -2,7 +2,10 @@ vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<C-s>", "<cmd>w<cr>")
 vim.keymap.set("i", "jk", "<esc>")
+vim.keymap.set("v", "jk", "<esc>")
 vim.keymap.set("n", "<leader>cs", "<cmd>nohl<cr>")
+vim.keymap.set("n", "ç", "%")
+vim.keymap.set("v", "ç", "%")
 
 -- In normal mode, this allows me to move blocks of code up and down with J and K.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
