@@ -1,20 +1,24 @@
 return {
   "nvim-telescope/telescope.nvim",
-  dependencies = { 'nvim-lua/plenary.nvim', "nvim-tree/nvim-web-devicons" },
+  branch = "0.1.x",
+  dependencies = {
+    "nvim-lua/plenary.nvim",
+    "nvim-tree/nvim-web-devicons",
+  },
   config = function()
-    local telescope = require('telescope')
-    local actions = require('telescope.actions')
+    local telescope = require("telescope")
+    local actions = require("telescope.actions")
 
     telescope.setup({
       defaults = {
         path_display = { "truncate" },
         mappings = {
           i = {
-            ["C-k"] = actions.move_selection_previous,
-            ["C-j"] = actions.move_selection_next,
-          }
-        }
-      }
+            ["<C-k>"] = actions.move_selection_previous,
+            ["<C-j>"] = actions.move_selection_next,
+          },
+        },
+      },
     })
-  end
+  end,
 }
