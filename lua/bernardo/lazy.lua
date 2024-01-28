@@ -19,6 +19,7 @@ require("lazy").setup({
   require('bernardo.plugins.lsp-zero'),
   require('bernardo.plugins.autopairs'),
   require('bernardo.plugins.alpha'),
+  require('bernardo.plugins.formatting'),
 
   -- themes
   require("bernardo.plugins.rose-pine"),
