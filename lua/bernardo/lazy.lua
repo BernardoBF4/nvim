@@ -18,6 +18,7 @@ require("lazy").setup({
   require('bernardo.plugins.treesitter'),
   require('bernardo.plugins.lsp-zero'),
   require('bernardo.plugins.autopairs'),
+  require('bernardo.plugins.alpha'),
 
   -- themes
   require("bernardo.plugins.rose-pine"),
