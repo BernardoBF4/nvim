@@ -20,7 +20,6 @@ require("lazy").setup({
   require('bernardo.plugins.autopairs'),
   require('bernardo.plugins.alpha'),
   require('bernardo.plugins.formatting'),
-  require('bernardo.plugins.conventional-commits'),
   require('bernardo.plugins.copilot'),
 
   -- themes
