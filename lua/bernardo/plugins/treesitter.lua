@@ -12,6 +12,7 @@ return {
         'scss',
         'css',
         'sql',
+        'vue',
       },
       enable = true,
       highlight = {
