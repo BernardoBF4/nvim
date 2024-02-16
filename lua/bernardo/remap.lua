@@ -6,7 +6,6 @@ vim.keymap.set("n", "<leader>cs", "<cmd>nohl<cr>")
 vim.keymap.set({ "n", "v" }, "ç", "%")
 vim.keymap.set({ "n", "v" }, "m", "$")
 
--- In normal mode, this allows me to move blocks of code up and down with J and K.
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv")
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv")
 
