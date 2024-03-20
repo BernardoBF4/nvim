@@ -35,6 +35,17 @@ vim.keymap.set("n", "<leader>fi", telescope_builtin.lsp_implementations)
 vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<cr>")
 vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<cr>")
 
+-- GitSigns
+local gitsigns = require('gitsigns')
+vim.keymap.set('n', '<leader>gh', gitsigns.stage_hunk)
+vim.keymap.set('n', '<leader>gH', gitsigns.undo_stage_hunk)
+vim.keymap.set('v', '<leader>gh', function() gitsigns.stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
+vim.keymap.set('v', '<leader>gH', function() gitsigns.unde_stage_hunk { vim.fn.line('.'), vim.fn.line('v') } end)
+vim.keymap.set('n', '<leader>gs', gitsigns.stage_buffer)
+vim.keymap.set('n', '<leader>gp', gitsigns.preview_hunk)
+vim.keymap.set('n', '<leader>gd', function() gitsigns.diffthis('~') end)
+vim.keymap.set('n', '<leader>gb', gitsigns.toggle_current_line_blame)
+
 -- Conform
 vim.keymap.set(
   { "n", "v" },

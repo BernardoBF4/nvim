@@ -23,6 +23,7 @@ require("lazy").setup({
   require('bernardo.plugins.formatting'),
   require('bernardo.plugins.copilot'),
   require('bernardo.plugins.nvim-comment'),
+  require('bernardo.plugins.gitsigns'),
 
   -- themes
   require("bernardo.plugins.rose-pine"),
