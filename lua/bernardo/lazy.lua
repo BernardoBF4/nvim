@@ -13,7 +13,6 @@ vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
   -- plugins
-  require('bernardo.plugins.nvim-tree'),
   require("bernardo.plugins.telescope"),
   require('bernardo.plugins.lua-line'),
   require('bernardo.plugins.treesitter'),
@@ -25,6 +24,7 @@ require("lazy").setup({
   require('bernardo.plugins.copilot-chat'),
   require('bernardo.plugins.nvim-comment'),
   require('bernardo.plugins.gitsigns'),
+  require('bernardo.plugins.minifiles'),
 
   -- themes
   require("bernardo.plugins.rose-pine"),

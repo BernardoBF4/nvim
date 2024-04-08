@@ -32,8 +32,8 @@ vim.keymap.set("n", "<leader>fd", telescope_builtin.lsp_definitions)
 vim.keymap.set("n", "<leader>fi", telescope_builtin.lsp_implementations)
 
 -- NvimTree
-vim.keymap.set("n", "<leader>ee", "<cmd>NvimTreeToggle<cr>")
-vim.keymap.set("n", "<leader>ef", "<cmd>NvimTreeFindFile<cr>")
+local minifiles = require('mini.files')
+vim.keymap.set("n", "<leader>ee", minifiles.open)
 
 -- GitSigns
 local gitsigns = require('gitsigns')
@@ -49,6 +49,7 @@ vim.keymap.set('n', '<leader>gtd', gitsigns.toggle_deleted)
 
 -- Copilot Chat
 vim.keymap.set('n', '<leader>cc', '<cmd>CopilotChatToggle<cr>')
+vim.keymap.set({ 'n', 'v' }, '<leader>cc', '<cmd>CopilotChatToggle<cr>')
 vim.keymap.set({ 'n', 'v' }, '<leader>ce', '<cmd>CopilotChatExplain<cr>')
 vim.keymap.set('n', '<leader>co', '<cmd>CopilotChatOptimize<cr>')
 vim.keymap.set('n', '<leader>cf', '<cmd>CopilotChatFix<cr>')
