@@ -8,7 +8,14 @@ return {
         delay = 0,
         ignore_whitespace = false,
         virt_text_priority = 100,
-      }
+      },
+      signs = {
+        add          = { text = '+' },
+        change       = { text = '~' },
+        delete       = { text = '-' },
+        changedelete = { text = '§' },
+        untracked    = { text = '?' },
+      },
     })
   end
 }
