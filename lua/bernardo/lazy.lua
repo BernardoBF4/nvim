@@ -24,6 +24,7 @@ require("lazy").setup({
   require('bernardo.plugins.copilot-chat'),
   require('bernardo.plugins.nvim-comment'),
   require('bernardo.plugins.gitsigns'),
+  require('bernardo.plugins.fugitive'),
   require('bernardo.plugins.minifiles'),
 
   -- themes
