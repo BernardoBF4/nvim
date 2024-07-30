@@ -64,6 +64,12 @@ vim.keymap.set('n', '<leader>co', '<cmd>CopilotChatOptimize<cr>')
 vim.keymap.set('n', '<leader>cf', '<cmd>CopilotChatFix<cr>')
 vim.keymap.set('n', '<leader>ct', '<cmd>CopilotChatTests<cr>')
 
+-- Windows
+vim.keymap.set("n", "<leader>wj", "<C-w>j")
+vim.keymap.set("n", "<leader>wk", "<C-w>k")
+vim.keymap.set("n", "<leader>wh", "<C-w>h")
+vim.keymap.set("n", "<leader>wl", "<C-w>l")
+
 -- Conform
 vim.keymap.set(
   { "n", "v" },
