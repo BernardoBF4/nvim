@@ -1,0 +1,13 @@
+✨ feat():
+🚑 fix():
+🆙 improve():
+🗑️ remove():
+🛠️ refactor():
+👘 style():
+🐎 performance():
+🧪 test():
+🏗 chore():
+📂 static():
+📚 docs():
+⏪ revert():
+🏁 init():

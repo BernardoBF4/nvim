@@ -1,3 +1,4 @@
+-- Editor
 vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
 vim.keymap.set("n", "<C-s>", "<cmd>w<cr>")
@@ -91,3 +92,6 @@ vim.keymap.set(
   end,
   { desc = "Formata o arquivo (no modo visual é aplicado ao que está selecionado)" }
 )
+
+-- lua
+vim.keymap.set('n', '<leader>gc', ':lua CommitWithTelescope()<CR>', { noremap = true, silent = true })
