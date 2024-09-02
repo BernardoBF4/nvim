@@ -11,19 +11,30 @@ return {
     local action_state = require('telescope.actions.state')
 
     function CommitWithTelescope()
+      local messages = vim.fn.readfile(vim.fn.expand('~/.config/nvim/lua/bernardo/default-commit-messages.txt'))
+
       require('telescope.pickers').new({}, {
         prompt_title = 'Select Commit Message',
         finder = require('telescope.finders').new_table {
-          results = vim.fn.readfile(vim.fn.expand('./lua/bernardo/default-commit-messages.txt')),
+          results = messages,
         },
         sorter = require('telescope.config').values.generic_sorter({}),
         attach_mappings = function(_, map)
           map('i', '<CR>', function(prompt_bufnr)
             local selection = action_state.get_selected_entry()
+
+            if not selection or selection[1]:match("^%s*%-+ .+ %-+%s*$") then
+              return
+            end
+
             actions.close(prompt_bufnr)
-            vim.cmd('G commit')                  -- Abre o editor de commit do Fugitive
-            vim.cmd('normal! i' .. selection[1]) -- Insere a mensagem no editor
-            vim.cmd('stopinsert')                -- Volta para o modo normal
+
+            local commit_message = selection[1]:match('^[^:]+:')
+            if commit_message then
+              vim.cmd('G commit')
+              vim.cmd('normal! i' .. commit_message)
+              vim.cmd('stopinsert')
+            end
           end)
           return true
         end,

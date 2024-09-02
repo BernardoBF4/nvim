@@ -1,13 +1,18 @@
-✨ feat():
-🚑 fix():
-🆙 improve():
-🗑️ remove():
-🛠️ refactor():
-👘 style():
-🐎 performance():
-🧪 test():
-🏗 chore():
-📂 static():
-📚 docs():
-⏪ revert():
-🏁 init():
+✨ feat(): nova funcionalidade 
+🚑 fix(): correção de bug
+🆙 improve(): melhoria uma funcionalidade
+🗑️ remove(): remoção de uma funcionalidade
+------ Feature ------
+🛠️ refactor(): melhoria na estrutura do código, sem alterar a funcionalidade
+🔥 cleanup(): remoção código morto ou inútil, comentários, etc
+👘 style(): estilo do código (indentação, formatação), ortografia, nomes de variáveis, etc
+🐎 performance(): performance do código melhorada
+------ Code ------
+🏗 chore(): dependências (libs), arquivos de configuração, scripts de automação, ferramentas de build 
+📂 static(): imagens, fontes, etc
+📚 docs(): documentação alterada/criada
+------ Chores ------
+🧪 test(): teste para uma funcionalidade, função, método, etc
+⏪ revert(): reversão para um commit anterior
+🏁 init(): iniciei o projeto
+------ Misc ------
