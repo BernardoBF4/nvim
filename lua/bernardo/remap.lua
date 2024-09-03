@@ -95,3 +95,5 @@ vim.keymap.set(
 
 -- lua
 vim.keymap.set('n', '<leader>gc', ':lua CommitWithTelescope()<CR>', { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>k', ":lua MoveSelectedLines('up')<CR>", { noremap = true, silent = true })
+vim.keymap.set('v', '<leader>j', ":lua MoveSelectedLines('down')<CR>", { noremap = true, silent = true })
