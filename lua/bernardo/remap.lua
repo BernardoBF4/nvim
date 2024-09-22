@@ -70,8 +70,8 @@ vim.keymap.set("n", "<leader>wc", "<C-w>c")
 vim.keymap.set("n", "<leader>wo", "<C-w>o")
 
 -- Color Picker
-vim.keymap.set("n", "cp", "<cmd>PickColor<cr>")
-vim.keymap.set("i", "cp", "<cmd>PickColorInsert<cr>")
+vim.keymap.set("n", "<leader>cp", "<cmd>PickColor<cr>")
+vim.keymap.set("i", "<leader>cp", "<cmd>PickColorInsert<cr>")
 
 -- Conform
 vim.keymap.set(
