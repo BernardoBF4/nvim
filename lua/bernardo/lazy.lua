@@ -23,7 +23,7 @@ require("lazy").setup({
   require('bernardo.plugins.alpha'),
   require('bernardo.plugins.formatting'),
   require('bernardo.plugins.nvim-comment'),
-  require('bernardo.plugins.gitsigns'),
+  require('bernardo.plugins.gitsign'),
   require('bernardo.plugins.mason'),
   require('bernardo.plugins.fugitive'),
   require('bernardo.plugins.minifiles'),
