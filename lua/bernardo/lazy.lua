@@ -16,7 +16,7 @@ require("lazy").setup({
   require("bernardo.plugins.telescope"),
   require('bernardo.plugins.lua-line'),
   require('bernardo.plugins.treesitter'),
-  require('bernardo.plugins.lsp.lsp-zero'),
+  require('bernardo.plugins.lsp.lsp'),
   require('bernardo.plugins.mason'),
   require('bernardo.plugins.cmp'),
   require('bernardo.plugins.autopairs'),
