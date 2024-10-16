@@ -6,6 +6,7 @@ return {
         'javascript',
         'typescript',
         'php',
+        'tsx',
         'html',
         'lua',
         'json',
