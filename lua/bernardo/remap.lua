@@ -34,7 +34,7 @@ vim.keymap.set("n", "<leader>fqf", telescope_builtin.quickfix, { desc = "Busca t
 vim.keymap.set("n", "<leader>fh", telescope_builtin.search_history, { desc = "Lista o histórico de buscas" })
 vim.keymap.set("n", "<leader>ft", telescope_builtin.lsp_document_symbols, { desc = "Lista os símbolos de um buffer" })
 vim.keymap.set("n", "<leader>fd", telescope_builtin.lsp_definitions, { desc = "Listar todas a definição" })
-vim.keymap.set("n", "<leader>fi", telescope_builtin.lsp_implementations, { desc = "Listar todas as implementações" })
+vim.keymap.set("n", "<leader>fi", telescope_builtin.lsp_references, { desc = "Listar todas as implementações" })
 
 -- NvimTree
 local minifiles = require('mini.files')
@@ -103,7 +103,6 @@ remaps.lsp = function(_, bufnr)
   vim.keymap.set("n", "<leader>ca", function() vim.lsp.buf.code_action() end, makeOptions("Abre as code actions"))
   vim.keymap.set("n", "<leader>rn", function() vim.lsp.buf.rename() end, makeOptions("Renomeia um símbolo"))
   vim.keymap.set("n", "gd", function() vim.lsp.buf.definition() end, makeOptions("Vai para a redifinição do símbolo"))
-  vim.keymap.set("n", "<leader>im", function() vim.lsp.buf.references() end, makeOptions("Listar implementação"))
 end
 
 -- CMP
