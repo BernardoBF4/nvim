@@ -26,7 +26,6 @@ require("lazy").setup({
   require('bernardo.plugins.gitsign'),
   require('bernardo.plugins.mason'),
   require('bernardo.plugins.fugitive'),
-  require('bernardo.plugins.minifiles'),
   require('bernardo.plugins.color-picker'),
 
   -- themes

@@ -2,7 +2,7 @@ local remaps = {}
 
 -- Editor
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "Abre a navegação nas pastas/arquivos" })
+vim.keymap.set("n", "ee", vim.cmd.Ex, { desc = "Abre a navegação nas pastas/arquivos" })
 vim.keymap.set("n", "<C-s>", "<cmd>w<cr>", { desc = "Salva as alterações do buffer" })
 vim.keymap.set({ "i", "v" }, "jk", "<esc>", { desc = "Voltar para o modo normal" })
 vim.keymap.set({ "i", "v" }, "kj", "<esc>", { desc = "Voltar para o modo normal" })
@@ -35,10 +35,6 @@ vim.keymap.set("n", "<leader>fh", telescope_builtin.search_history, { desc = "Li
 vim.keymap.set("n", "<leader>ft", telescope_builtin.lsp_document_symbols, { desc = "Lista os símbolos de um buffer" })
 vim.keymap.set("n", "<leader>fd", telescope_builtin.lsp_definitions, { desc = "Listar todas a definição" })
 vim.keymap.set("n", "<leader>fi", telescope_builtin.lsp_references, { desc = "Listar todas as implementações" })
-
--- NvimTree
-local minifiles = require('mini.files')
-vim.keymap.set("n", "<leader>ee", minifiles.open, { desc = "Abre o editor/navegação de arquivos" })
 
 -- GitSigns
 local gitsigns = require('gitsigns')
