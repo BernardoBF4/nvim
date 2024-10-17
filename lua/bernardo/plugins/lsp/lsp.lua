@@ -12,7 +12,7 @@ return {
       'williamboman/mason-lspconfig.nvim',
     },
     config = function()
-      require('bernardo.plugins.lsp.setup')
+      require('lsp-zero').setup()
     end
   },
 }
