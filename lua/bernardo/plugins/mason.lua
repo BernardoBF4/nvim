@@ -11,7 +11,7 @@ return {
       local lsp_zero = require('bernardo.plugins.lsp.setup')
 
       require('mason-lspconfig').setup({
-        ensure_installed = { 'ts_ls', 'volar', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls' },
+        ensure_installed = { 'ts_ls', 'volar', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright' },
         handlers = {
           lsp_zero.default_setup,
           lua_ls = function()
