@@ -31,7 +31,8 @@ return {
                 plugins = {
                   {
                     name = '@vue/typescript-plugin',
-                    location = '/home/bernardo/.nvm/versions/node/v23.2.0/lib/node_modules/@vue/language-server',
+                    location = vim.fn.expand("$HOME") ..
+                        "/.nvm/versions/node/v23.2.0/lib/node_modules/@vue/language-server",
                     languages = { 'vue' },
                   },
                 },
