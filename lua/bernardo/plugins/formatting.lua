@@ -16,7 +16,10 @@ return {
         scss = { "prettier" },
         css = { "prettier" },
         html = { "prettier" },
-        vue = { "prettier" },
+        vue = {
+          "prettier",
+          args = { "--single-attribute-per-line", "--no-semi", "--single-quote" },
+        },
         lua = { "stylua" },
         php = { "php_cs_fixer", "pint" },
       },
