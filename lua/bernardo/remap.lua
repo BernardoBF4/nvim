@@ -26,10 +26,34 @@ vim.keymap.set("n", "<leader>,", "<cmd>bprev<cr>", { desc = "Voltar para o buffe
 
 -- Telescope
 local telescope_builtin = require('telescope.builtin')
-vim.keymap.set("n", "<leader>ff", "<cmd>Telescope git_files hidden=true show_untracked=true<cr>")
-vim.keymap.set("n", "<leader>fa", "<cmd>Telescope find_files<cr>", { desc = "Voltar para o buffer anterior" })
+local excluded_files_from_search = {
+  'rg',
+  '--color=never',
+  '--no-heading',
+  '--with-filename',
+  '--line-number',
+  '--column',
+  '--smart-case',
+  '--glob', '!node_modules/',
+  '--glob', '!dist/', }
+local excluded_files_from_find = {
+  'find', '.',
+  '-type', 'f',
+  '!', '-path', './node_modules/*',
+  '!', '-path', './dist/*',
+  '!', '-name', '*.log'
+}
+vim.keymap.set("n", "<leader>ff",
+  function() telescope_builtin.find_files({ find_command = excluded_files_from_find }) end,
+  { desc = "Busca todos os arquivos no que são de desenvolvimento mesmo" })
+vim.keymap.set("n", "<leader>fg", "<cmd>Telescope git_files hidden=true show_untracked=true<cr>",
+  { desc = "Pesquisa em todos os arquivos no projeto que estão no git" })
+vim.keymap.set("n", "<leader>fa", "<cmd>Telescope find_files<cr>", { desc = "Pesquisa em todos os arquivos no projeto" })
 vim.keymap.set('n', '<leader>fb', '<cmd>Telescope buffers<cr>', { desc = "Listar os buffers" })
-vim.keymap.set("n", "<leader>fs", "<cmd>Telescope live_grep<cr>", { desc = "Busca textual em todos os arquivos" })
+vim.keymap.set("n", "<leader>fs",
+  function() telescope_builtin.live_grep({ vimgrep_arguments = excluded_files_from_search }) end,
+  { desc = "Busca textual em arquivos que são de desenvolvimento mesmo" })
+vim.keymap.set("n", "<leader>fsa", '<cmd>Telescope live_grep<cr>', { desc = "Busca textual em todos os arquivos" })
 vim.keymap.set("n", "<leader>fqf", telescope_builtin.quickfix, { desc = "Buscar por quickfixes" })
 vim.keymap.set("n", "<leader>fh", telescope_builtin.search_history, { desc = "Lista o histórico de buscas" })
 vim.keymap.set("n", "<leader>ft", telescope_builtin.lsp_document_symbols, { desc = "Lista os símbolos de um buffer" })
