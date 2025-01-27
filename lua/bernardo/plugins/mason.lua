@@ -42,13 +42,6 @@ return {
                 },
               },
             })
-            lspconfig.volar.setup({
-              init_options = {
-                vue = {
-                  hybridMode = false,
-                },
-              },
-            })
           end,
         }
       })
