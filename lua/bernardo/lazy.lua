@@ -30,6 +30,7 @@ require("lazy").setup({
 
   -- themes
   require("bernardo.plugins.rose-pine"),
+  require("bernardo.plugins.kanagawa"),
 
   -- sporadic
   require('bernardo.plugins.vim-be-good'),
