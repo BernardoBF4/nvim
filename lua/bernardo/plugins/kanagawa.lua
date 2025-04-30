@@ -18,7 +18,7 @@ return {
         palette = {},
         theme = { wave = {}, lotus = {}, dragon = {}, all = {} },
       },
-      overrides = function(colors)
+      overrides = function()
         return {}
       end,
       theme = "wave",
@@ -27,7 +27,5 @@ return {
         light = "lotus"
       },
     })
-
-    vim.cmd("colorscheme kanagawa")
   end
 }
