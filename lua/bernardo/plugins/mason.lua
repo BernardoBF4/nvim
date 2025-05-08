@@ -8,9 +8,10 @@ return {
   {
     'williamboman/mason-lspconfig.nvim',
     config = function()
-      local lsp_zero = require('bernardo.plugins.lsp.setup')
+      local lsp_zero = require('lsp-zero')
 
       require('mason-lspconfig').setup({
+        automatic_enable = true,
         ensure_installed = { 'ts_ls', 'volar', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright' },
         handlers = {
           lsp_zero.default_setup,
