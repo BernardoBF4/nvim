@@ -17,7 +17,6 @@ require("lazy").setup({
   require('bernardo.plugins.lua-line'),
   require('bernardo.plugins.treesitter'),
   require('bernardo.plugins.lsp.lsp'),
-  require('bernardo.plugins.mason'),
   require('bernardo.plugins.cmp'),
   require('bernardo.plugins.autopairs'),
   require('bernardo.plugins.alpha'),
@@ -27,6 +26,7 @@ require("lazy").setup({
   require('bernardo.plugins.mason'),
   require('bernardo.plugins.fugitive'),
   require('bernardo.plugins.color-picker'),
+  require('bernardo.plugins.drop'),
 
   -- themes
   require("bernardo.plugins.rose-pine"),
