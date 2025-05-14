@@ -24,7 +24,6 @@ require("lazy").setup({
   require('bernardo.plugins.nvim-comment'),
   require('bernardo.plugins.gitsign'),
   require('bernardo.plugins.mason'),
-  require('bernardo.plugins.mason-workaround'),
   require('bernardo.plugins.fugitive'),
   require('bernardo.plugins.color-picker'),
   require('bernardo.plugins.drop'),
