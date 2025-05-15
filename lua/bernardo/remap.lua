@@ -118,7 +118,8 @@ remaps.lsp = function(_, bufnr)
     return { buffer = bufnr, remap = false, desc = description }
   end
 
-  vim.keymap.set("n", "K", function() vim.lsp.buf.hover() end, makeOptions("Mostra a definição"))
+  vim.keymap.set("n", "K", function() vim.lsp.buf.hover({ border = "double", max_height = 25, max_width = 120 }) end,
+    makeOptions("Mostra a definição"))
   vim.keymap.set("n", "<leader>vd", function() vim.diagnostic.open_float() end,
     makeOptions("Abre o popup de diagnósticos"))
   vim.keymap.set("n", "]d", function() vim.diagnostic.goto_next() end, makeOptions("Vai para o próximo diagnóstico"))
