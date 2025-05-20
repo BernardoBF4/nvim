@@ -24,6 +24,10 @@ return {
         },
         formatting = lsp_zero.cmp_format(),
         mapping = cmp.mapping.preset.insert(remaps.cmp(cmp)),
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered()
+        }
       })
     end
   }
