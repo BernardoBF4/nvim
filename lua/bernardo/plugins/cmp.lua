@@ -22,8 +22,30 @@ return {
           { name = 'path' },
           { name = 'buffer',  keyword_length = 3 },
         },
-        formatting = lsp_zero.cmp_format(),
+        formatting = {
+          format = function(entry, vim_item)
+            vim_item.menu = ({
+              nvim_lsp = '[LSP]',
+              vsnip = '[Snippet]',
+              nvim_lua = '[Nvim Lua]',
+              buffer = '[Buffer]',
+            })[entry.source.name]
+
+            vim_item.dup = ({
+              vsnip = 0,
+              nvim_lsp = 0,
+              nvim_lua = 0,
+              buffer = 0,
+            })[entry.source.name] or 0
+
+            return vim_item
+          end
+        },
         mapping = cmp.mapping.preset.insert(remaps.cmp(cmp)),
+        window = {
+          completion = cmp.config.window.bordered(),
+          documentation = cmp.config.window.bordered()
+        },
       })
     end
   }
