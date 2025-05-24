@@ -9,42 +9,42 @@ return {
     'williamboman/mason-lspconfig.nvim',
     config = function()
       local lsp_zero = require('lsp-zero')
+      local lspconfig = require('lspconfig')
+
+      -- Configure lua_ls
+      local lua_opts = lsp_zero.nvim_lua_ls()
+      vim.lsp.config('lua_ls', lua_opts)
+
+      -- Configure volar (não migrado)
+      vim.lsp.config('vue_ls', {
+        filetypes = { 'javascriptreact', 'typescriptreact', 'vue' },
+        init_options = {
+          vue = {
+            hybridMode = false,
+          },
+        },
+        on_attach = function(client)
+          client.server_capabilities.documentFormattingProvider = false
+          client.server_capabilities.documentRangeFormattingProvider = false
+        end
+      })
+
+      -- Configure ts_ls
+      vim.lsp.config('ts_ls', {
+        init_options = {
+          plugins = {
+            {
+              name = '@vue/typescript-plugin',
+              location = vim.fn.expand("$HOME") .. "/.nvm/versions/node/v23.2.0/lib/node_modules/@vue/language-server",
+              languages = { 'vue' },
+            },
+          },
+        },
+      })
 
       require('mason-lspconfig').setup({
+        ensure_installed = { 'ts_ls', 'vue_ls', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright' },
         automatic_enable = true,
-        ensure_installed = { 'ts_ls', 'volar', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright' },
-        handlers = {
-          lsp_zero.default_setup,
-          lua_ls = function()
-            local lua_opts = lsp_zero.nvim_lua_ls()
-            local lspconfig = require('lspconfig')
-            lspconfig.lua_ls.setup(lua_opts)
-            lspconfig.volar.setup({
-              filetypes = { 'javascriptreact', 'typescriptreact', 'vue' },
-              init_options = {
-                vue = {
-                  hybridMode = false,
-                },
-              },
-              on_attach = function(client)
-                client.server_capabilities.documentFormattingProvider = false
-                client.server_capabilities.documentRangeFormattingProvider = false
-              end
-            })
-            lspconfig.ts_ls.setup({
-              init_options = {
-                plugins = {
-                  {
-                    name = '@vue/typescript-plugin',
-                    location = vim.fn.expand("$HOME") ..
-                        "/.nvm/versions/node/v23.2.0/lib/node_modules/@vue/language-server",
-                    languages = { 'vue' },
-                  },
-                },
-              },
-            })
-          end,
-        }
       })
     end
   },
