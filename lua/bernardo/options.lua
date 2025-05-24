@@ -37,3 +37,8 @@ opt.splitbelow = true -- split horizontal window to the bottom
 
 -- turn off swapfile
 opt.swapfile = false
+
+-- diagnostics
+vim.diagnostic.config({
+  virtual_text = true
+})
