@@ -9,13 +9,10 @@ return {
     'williamboman/mason-lspconfig.nvim',
     config = function()
       local lsp_zero = require('lsp-zero')
-      local lspconfig = require('lspconfig')
 
-      -- Configure lua_ls
       local lua_opts = lsp_zero.nvim_lua_ls()
       vim.lsp.config('lua_ls', lua_opts)
 
-      -- Configure volar (não migrado)
       vim.lsp.config('vue_ls', {
         filetypes = { 'javascriptreact', 'typescriptreact', 'vue' },
         init_options = {
@@ -29,7 +26,6 @@ return {
         end
       })
 
-      -- Configure ts_ls
       vim.lsp.config('ts_ls', {
         init_options = {
           plugins = {
