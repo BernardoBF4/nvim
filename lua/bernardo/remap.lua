@@ -12,6 +12,7 @@ vim.keymap.set({ "n", "v" }, "M", "^", { desc = "Ir para o começo da linha" })
 vim.keymap.set({ "n", "v" }, "m", "$", { desc = "Ir para o final da linha" })
 
 vim.keymap.set({ "n", "v" }, "<leader>l", "<cmd>bd<cr>", { desc = "Fechar o buffer" })
+vim.keymap.set({ "n", "v" }, "<leader>L", "<cmd>%bd<cr>", { desc = "Fechar todos os buffers" })
 vim.keymap.set({ "n", "v" }, "<leader>r", "<cmd>LspRestart<cr>", { desc = "Restartar o LSP" })
 
 vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", { desc = "Mover bloco para baixo" })
