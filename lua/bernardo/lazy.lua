@@ -21,6 +21,8 @@ require("lazy").setup({
   require('bernardo.plugins.autopairs'),
   require('bernardo.plugins.alpha'),
   require('bernardo.plugins.formatting'),
+  require('bernardo.plugins.copilot'),
+  require('bernardo.plugins.copilot-chat'),
   require('bernardo.plugins.nvim-comment'),
   require('bernardo.plugins.gitsign'),
   require('bernardo.plugins.mason'),

@@ -86,6 +86,14 @@ vim.keymap.set('n', '<leader>gd', function() gitsigns.diffthis('~') end, { desc 
 vim.keymap.set('n', '<leader>gb', gitsigns.toggle_current_line_blame, { desc = "Mostra o blame na linha atual" })
 vim.keymap.set('n', '<leader>gtd', gitsigns.toggle_deleted, { desc = "Mostra o que foi deletado" })
 
+-- Copilot Chat
+vim.keymap.set('n', '<leader>cc', '<cmd>CopilotChatToggle<cr>')
+vim.keymap.set({ 'n', 'v' }, '<leader>cc', '<cmd>CopilotChatToggle<cr>')
+vim.keymap.set({ 'n', 'v' }, '<leader>ce', '<cmd>CopilotChatExplain<cr>')
+vim.keymap.set('n', '<leader>co', '<cmd>CopilotChatOptimize<cr>')
+vim.keymap.set('n', '<leader>cf', '<cmd>CopilotChatFix<cr>')
+vim.keymap.set('n', '<leader>ct', '<cmd>CopilotChatTests<cr>')
+
 -- Windows
 vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Vai pra janela de baixo" })
 vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Vai pra janela de cima" })
