@@ -144,7 +144,7 @@ remaps.cmp = function(cmp)
   return {
     ['<S-k>'] = cmp.mapping.select_prev_item(select),
     ['<S-j>'] = cmp.mapping.select_next_item(select),
-    ['<Tab>'] = cmp.mapping.confirm({ select = true }),
+    ['<S-l>'] = cmp.mapping.confirm({ select = true }),
     ['<S-h>'] = cmp.mapping.complete(),
   }
 end
