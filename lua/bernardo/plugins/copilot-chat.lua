@@ -1,6 +1,6 @@
 return {
   "CopilotC-Nvim/CopilotChat.nvim",
-  branch = "canary",
+  branch = "main",
   lazy = false,
   dependencies = {
     { "nvim-lua/plenary.nvim" },
