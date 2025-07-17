@@ -28,6 +28,7 @@ require("lazy").setup({
   require('bernardo.plugins.color-picker'),
   require('bernardo.plugins.drop'),
   require('bernardo.plugins.supermaven'),
+  require('bernardo.plugins.glimmer'),
 
   -- themes
   require("bernardo.plugins.rose-pine"),
