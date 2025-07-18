@@ -61,7 +61,7 @@ return {
       vim.lsp.enable({ 'vtsls', 'vue_ls' })
 
       require('mason-lspconfig').setup({
-        ensure_installed = { 'vue_ls', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright' },
+        ensure_installed = { 'vtsls', 'vue_ls', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright' },
         automatic_enable = true,
       })
     end
