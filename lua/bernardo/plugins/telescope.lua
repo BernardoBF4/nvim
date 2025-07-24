@@ -43,7 +43,10 @@ return {
 
     telescope.setup({
       defaults = {
-        path_display = { "truncate" },
+        path_display = function(opts, path)
+          local tail = require("telescope.utils").path_tail(path)
+          return string.format("%s        | %s", tail, path)
+        end,
         mappings = {
           i = {
             ["<C-k>"] = actions.move_selection_previous,
