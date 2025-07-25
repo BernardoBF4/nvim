@@ -2,7 +2,12 @@ return {
   {
     'williamboman/mason.nvim',
     config = function()
-      require('mason').setup()
+      require('mason').setup({
+        ensure_installed = {
+          'java-debug-adapter',
+          'java-test',
+        }
+      })
     end
   },
   {
@@ -61,7 +66,7 @@ return {
       vim.lsp.enable({ 'vtsls', 'vue_ls' })
 
       require('mason-lspconfig').setup({
-        ensure_installed = { 'vue_ls', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright' },
+        ensure_installed = { 'vue_ls', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright', 'jdtls' },
         automatic_enable = true,
       })
     end

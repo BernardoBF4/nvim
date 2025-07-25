@@ -11,10 +11,15 @@ return {
     },
     config = function()
       local cmp = require('cmp')
-      local lsp_zero = require('lsp-zero')
+      local lsp_zerp = require('lsp-zero')
       local remaps = require('bernardo.remap')
 
       cmp.setup({
+        snippet = {
+          expand = function(args)
+            require('luasnip').lsp_expand(args.body) -- Informa ao cmp como expandir snippets
+          end,
+        },
         sources = {
           { name = 'nvim_lsp' }, -- Ensure lsp source is enabled
           { name = 'nvim_lua' },
