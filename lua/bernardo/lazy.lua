@@ -1,3 +1,6 @@
+-- ~/.config/nvim/init.lua
+
+-- 1. CÓDIGO PADRÃO PARA INSTALAR O LAZY.NVIM
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.uv.fs_stat(lazypath) then
   vim.fn.system({
@@ -11,31 +14,4 @@ if not vim.uv.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-require("lazy").setup({
-  -- plugins
-  require("bernardo.plugins.telescope"),
-  require('bernardo.plugins.lua-line'),
-  require('bernardo.plugins.treesitter'),
-  require('bernardo.plugins.lsp'),
-  require('bernardo.plugins.cmp'),
-  require('bernardo.plugins.autopairs'),
-  require('bernardo.plugins.alpha'),
-  require('bernardo.plugins.formatting'),
-  require('bernardo.plugins.nvim-comment'),
-  require('bernardo.plugins.gitsign'),
-  require('bernardo.plugins.mason'),
-  require('bernardo.plugins.fugitive'),
-  require('bernardo.plugins.color-picker'),
-  require('bernardo.plugins.drop'),
-  require('bernardo.plugins.supermaven'),
-  require('bernardo.plugins.debugger'),
-  require('bernardo.plugins.java'),
-  require('bernardo.plugins.glimmer'),
-
-  -- themes
-  require("bernardo.plugins.rose-pine"),
-  require("bernardo.plugins.kanagawa"),
-
-  -- sporadic
-  require('bernardo.plugins.vim-be-good'),
-})
+require("lazy").setup('bernardo.plugins')

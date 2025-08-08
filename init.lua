@@ -1,8 +1,8 @@
-require('bernardo.lazy')
 require('bernardo.options')
+require('bernardo.lazy')
 require('bernardo.remap')
-require('bernardo.functions')
 
 vim.cmd("colorscheme rose-pine")
 
-require('bernardo.plugins.discipline').cowboy()
+require('bernardo.util.functions')
+require('bernardo.util.discipline').cowboy()

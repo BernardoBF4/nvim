@@ -1,7 +1,6 @@
 local remaps = {}
 
 -- Editor
-vim.g.mapleader = " "
 vim.keymap.set("n", "<leader>e", vim.cmd.Ex, { desc = "Abre a navegação nas pastas/arquivos" })
 vim.keymap.set("n", "<C-s>", "<cmd>w<cr>", { desc = "Salva as alterações do buffer" })
 vim.keymap.set({ "i", "v" }, "jk", "<esc>", { desc = "Voltar para o modo normal" })
