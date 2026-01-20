@@ -6,6 +6,7 @@ return {
         ensure_installed = {
           'java-debug-adapter',
           'java-test',
+          'eslint-lsp'
         }
       })
     end
@@ -63,10 +64,17 @@ return {
         },
         filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue' },
       })
-      vim.lsp.enable({ 'vtsls', 'vue_ls' })
+
+      vim.lsp.config('eslint', {
+        settings = {
+          workingDirectory = { mode = 'auto' },
+        },
+      })
+
+      vim.lsp.enable({ 'vtsls', 'vue_ls', 'eslint' })
 
       require('mason-lspconfig').setup({
-        ensure_installed = { 'vue_ls', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright', 'jdtls' },
+        ensure_installed = { 'vue_ls', 'eslint', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright', 'jdtls' },
         automatic_enable = true,
       })
     end
