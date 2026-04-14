@@ -71,10 +71,10 @@ return {
         },
       })
 
-      vim.lsp.enable({ 'vtsls', 'vue_ls', 'eslint' })
+      vim.lsp.enable({ 'vtsls', 'vue_ls', 'eslint', 'angularls' })
 
       require('mason-lspconfig').setup({
-        ensure_installed = { 'vue_ls', 'eslint', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright', 'jdtls' },
+        ensure_installed = { 'vue_ls', 'eslint', 'html', 'intelephense', 'cssls', 'jsonls', 'lua_ls', 'pyright', 'jdtls', 'angularls' },
         automatic_enable = true,
       })
     end
