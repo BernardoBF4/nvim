@@ -48,8 +48,12 @@ return {
         },
         mapping = cmp.mapping.preset.insert(remaps.cmp(cmp)),
         window = {
-          completion = cmp.config.window.bordered(),
-          documentation = cmp.config.window.bordered()
+          completion = cmp.config.window.bordered({
+            border = 'rounded',
+          }),
+          documentation = cmp.config.window.bordered({
+            border = 'rounded',
+          }),
         },
       })
     end
