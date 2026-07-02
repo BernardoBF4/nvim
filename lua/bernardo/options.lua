@@ -44,3 +44,11 @@ opt.swapfile = false
 vim.diagnostic.config({
   virtual_text = true
 })
+
+opt.foldmethod = "expr"
+opt.foldexpr = "v:lua.vim.treesitter.foldexpr()"
+
+-- cria/detecta os folds, mas deixa tudo aberto ao abrir o arquivo
+opt.foldenable = true
+opt.foldlevel = 99
+opt.foldlevelstart = 99
