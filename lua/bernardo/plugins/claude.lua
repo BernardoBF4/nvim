@@ -45,7 +45,6 @@ return {
       snacks_win_opts = {
         position = "float",
 
-        -- No Snacks.win, 0 significa largura/altura máxima
         width = 0,
         height = 0,
 
